@@ -1,0 +1,16 @@
+#Greedy Algorithm - Optimal Task Assignment
+#[6, 3, 2, 7, 5, 5] - correspond to hours for one task
+#find optimal way assign to 3 workers (all 2)
+# task independent
+#min time in total
+#Brute Force: Enumerate every possible pair
+#Greedy Algorithm: Pair longest task with shortest one
+# Time complexity is O(n log n) (due to sorting)
+
+A = [6, 3, 2, 10, 5, 6]
+A = sorted(A)
+print A
+for i in range(len(A)//2):
+	print(A[i], A[~i])
+	pair_sum = str((A[i]+A[~i]))
+	print(pair_sum)
